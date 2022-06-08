@@ -34,7 +34,7 @@ class SaveDashboardCommandModel(object):
     """
     swagger_types = {
         'updated_at': 'datetime',
-        'dashboard': 'JsonModel',
+        'dashboard': 'DashboardModel',
         'folder_id': 'int',
         'folder_uid': 'str',
         'is_folder': 'bool',
@@ -114,7 +114,7 @@ class SaveDashboardCommandModel(object):
 
 
         :return: The dashboard of this SaveDashboardCommandModel.  # noqa: E501
-        :rtype: JsonModel
+        :rtype: DashboardModel
         """
         return self._dashboard
 
@@ -124,7 +124,7 @@ class SaveDashboardCommandModel(object):
 
 
         :param dashboard: The dashboard of this SaveDashboardCommandModel.  # noqa: E501
-        :type: JsonModel
+        :type: DashboardModel
         """
 
         self._dashboard = dashboard
