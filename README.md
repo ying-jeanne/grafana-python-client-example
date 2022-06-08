@@ -5,3 +5,13 @@ To generate the python client from the latest swagger json of open source grafan
 ```
 make generate
 ```
+
+To generate the python client from local swagger json
+```
+make generate-local
+```
+
+To clean up the generated python client
+```
+make clean
+```
