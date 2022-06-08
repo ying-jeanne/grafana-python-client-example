@@ -1,0 +1,12 @@
+# DataLinkModel
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**target_blank** | **bool** |  | [optional] 
+**title** | **str** |  | [optional] 
+**url** | **str** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
