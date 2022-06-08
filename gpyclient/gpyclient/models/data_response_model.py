@@ -33,73 +33,71 @@ class DataResponseModel(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'error': 'str',
-        'frames': 'FramesModel'
+        'message': 'str',
+        'results': 'dict(str, DataQueryResultModel)'
     }
 
     attribute_map = {
-        'error': 'Error',
-        'frames': 'Frames'
+        'message': 'message',
+        'results': 'results'
     }
 
-    def __init__(self, error=None, frames=None, _configuration=None):  # noqa: E501
+    def __init__(self, message=None, results=None, _configuration=None):  # noqa: E501
         """DataResponseModel - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
         self._configuration = _configuration
 
-        self._error = None
-        self._frames = None
+        self._message = None
+        self._results = None
         self.discriminator = None
 
-        if error is not None:
-            self.error = error
-        if frames is not None:
-            self.frames = frames
+        if message is not None:
+            self.message = message
+        if results is not None:
+            self.results = results
 
     @property
-    def error(self):
-        """Gets the error of this DataResponseModel.  # noqa: E501
+    def message(self):
+        """Gets the message of this DataResponseModel.  # noqa: E501
 
-        Error is a property to be set if the the corresponding DataQuery has an error.  # noqa: E501
 
-        :return: The error of this DataResponseModel.  # noqa: E501
+        :return: The message of this DataResponseModel.  # noqa: E501
         :rtype: str
         """
-        return self._error
+        return self._message
 
-    @error.setter
-    def error(self, error):
-        """Sets the error of this DataResponseModel.
+    @message.setter
+    def message(self, message):
+        """Sets the message of this DataResponseModel.
 
-        Error is a property to be set if the the corresponding DataQuery has an error.  # noqa: E501
 
-        :param error: The error of this DataResponseModel.  # noqa: E501
+        :param message: The message of this DataResponseModel.  # noqa: E501
         :type: str
         """
 
-        self._error = error
+        self._message = message
 
     @property
-    def frames(self):
-        """Gets the frames of this DataResponseModel.  # noqa: E501
+    def results(self):
+        """Gets the results of this DataResponseModel.  # noqa: E501
 
 
-        :return: The frames of this DataResponseModel.  # noqa: E501
-        :rtype: FramesModel
+        :return: The results of this DataResponseModel.  # noqa: E501
+        :rtype: dict(str, DataQueryResultModel)
         """
-        return self._frames
+        return self._results
 
-    @frames.setter
-    def frames(self, frames):
-        """Sets the frames of this DataResponseModel.
+    @results.setter
+    def results(self, results):
+        """Sets the results of this DataResponseModel.
 
 
-        :param frames: The frames of this DataResponseModel.  # noqa: E501
-        :type: FramesModel
+        :param results: The results of this DataResponseModel.  # noqa: E501
+        :type: dict(str, DataQueryResultModel)
         """
 
-        self._frames = frames
+        self._results = results
 
     def to_dict(self):
         """Returns the model properties as a dict"""

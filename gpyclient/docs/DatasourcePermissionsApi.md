@@ -4,14 +4,14 @@ All URIs are relative to *http://localhost/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**delete_permissions**](DatasourcePermissionsApi.md#delete_permissions) | **DELETE** /datasources/{datasourceId}/permissions/{permissionId} | Remove permission for a data source.
-[**disable_permissions**](DatasourcePermissionsApi.md#disable_permissions) | **POST** /datasources/{datasourceId}/disable-permissions | Disable permissions for a data source.
-[**enable_permissions**](DatasourcePermissionsApi.md#enable_permissions) | **POST** /datasources/{datasourceId}/enable-permissions | Enable permissions for a data source.
-[**get_permissions**](DatasourcePermissionsApi.md#get_permissions) | **GET** /datasources/{datasourceId}/permissions | Get permissions for a data source.
+[**delete_permissions**](DatasourcePermissionsApi.md#delete_permissions) | **DELETE** /datasources/{datasource_id}/permissions/{permissionId} | Remove permission for a data source.
+[**disable_permissions**](DatasourcePermissionsApi.md#disable_permissions) | **POST** /datasources/{datasource_id}/disable-permissions | Disable permissions for a data source.
+[**enable_permissions**](DatasourcePermissionsApi.md#enable_permissions) | **POST** /datasources/{datasource_id}/enable-permissions | Enable permissions for a data source.
+[**get_permissions**](DatasourcePermissionsApi.md#get_permissions) | **GET** /datasources/{datasource_id}/permissions | Get permissions for a data source.
 
 
 # **delete_permissions**
-> SuccessResponseBodyModel delete_permissions(datasource_id, permission_id)
+> SuccessResponseBodyModel delete_permissions(id, permission_id)
 
 Remove permission for a data source.
 
@@ -37,12 +37,12 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gpyclient.DatasourcePermissionsApi(gpyclient.ApiClient(configuration))
-datasource_id = 'datasource_id_example' # str | 
+id = 'id_example' # str | 
 permission_id = 'permission_id_example' # str | 
 
 try:
     # Remove permission for a data source.
-    api_response = api_instance.delete_permissions(datasource_id, permission_id)
+    api_response = api_instance.delete_permissions(id, permission_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DatasourcePermissionsApi->delete_permissions: %s\n" % e)
@@ -52,7 +52,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datasource_id** | **str**|  | 
+ **id** | **str**|  | 
  **permission_id** | **str**|  | 
 
 ### Return type
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **disable_permissions**
-> InlineResponse2006Model disable_permissions(datasource_id)
+> InlineResponse2006Model disable_permissions(id)
 
 Disable permissions for a data source.
 
@@ -97,11 +97,11 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gpyclient.DatasourcePermissionsApi(gpyclient.ApiClient(configuration))
-datasource_id = 'datasource_id_example' # str | 
+id = 'id_example' # str | 
 
 try:
     # Disable permissions for a data source.
-    api_response = api_instance.disable_permissions(datasource_id)
+    api_response = api_instance.disable_permissions(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DatasourcePermissionsApi->disable_permissions: %s\n" % e)
@@ -111,7 +111,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datasource_id** | **str**|  | 
+ **id** | **str**|  | 
 
 ### Return type
 
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **enable_permissions**
-> InlineResponse2006Model enable_permissions(datasource_id)
+> InlineResponse2006Model enable_permissions(id)
 
 Enable permissions for a data source.
 
@@ -155,11 +155,11 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gpyclient.DatasourcePermissionsApi(gpyclient.ApiClient(configuration))
-datasource_id = 'datasource_id_example' # str | 
+id = 'id_example' # str | 
 
 try:
     # Enable permissions for a data source.
-    api_response = api_instance.enable_permissions(datasource_id)
+    api_response = api_instance.enable_permissions(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DatasourcePermissionsApi->enable_permissions: %s\n" % e)
@@ -169,7 +169,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datasource_id** | **str**|  | 
+ **id** | **str**|  | 
 
 ### Return type
 
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_permissions**
-> AddPermissionDTOModel get_permissions(datasource_id)
+> AddPermissionDTOModel get_permissions(id)
 
 Get permissions for a data source.
 
@@ -213,11 +213,11 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gpyclient.DatasourcePermissionsApi(gpyclient.ApiClient(configuration))
-datasource_id = 'datasource_id_example' # str | 
+id = 'id_example' # str | 
 
 try:
     # Get permissions for a data source.
-    api_response = api_instance.get_permissions(datasource_id)
+    api_response = api_instance.get_permissions(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DatasourcePermissionsApi->get_permissions: %s\n" % e)
@@ -227,7 +227,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datasource_id** | **str**|  | 
+ **id** | **str**|  | 
 
 ### Return type
 

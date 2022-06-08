@@ -23,6 +23,7 @@ Method | HTTP request | Description
 [**get_datasource_by_uid**](DatasourcesApi.md#get_datasource_by_uid) | **GET** /datasources/uid/{uid} | Get a single data source by UID.
 [**get_datasource_id_by_name**](DatasourcesApi.md#get_datasource_id_by_name) | **GET** /datasources/id/{name} | Get data source Id by Name.
 [**get_datasources**](DatasourcesApi.md#get_datasources) | **GET** /datasources | Get all data sources.
+[**query_datasource**](DatasourcesApi.md#query_datasource) | **POST** /tsdb/query | Query metrics.
 [**update_datasource_by_id**](DatasourcesApi.md#update_datasource_by_id) | **PUT** /datasources/{id} | Update an existing data source by its sequential ID.
 [**update_datasource_by_uid**](DatasourcesApi.md#update_datasource_by_uid) | **PUT** /datasources/uid/{uid} | Update an existing data source.
 
@@ -1121,6 +1122,64 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**DataSourceListModel**](DataSourceListModel.md)
+
+### Authorization
+
+[api_key](../README.md#api_key), [basic](../README.md#basic)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **query_datasource**
+> DataResponseModel query_datasource(body)
+
+Query metrics.
+
+Please refer to [updated API](#/ds/queryMetricsWithExpressions) instead  Queries a data source having backend implementation.  Most of Grafana’s builtin data sources have backend implementation.  If you are running Grafana Enterprise and have Fine-grained access control enabled you need to have a permission with action: `datasources:query`.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import gpyclient
+from gpyclient.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+configuration = gpyclient.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+# Configure HTTP basic authorization: basic
+configuration = gpyclient.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = gpyclient.DatasourcesApi(gpyclient.ApiClient(configuration))
+body = gpyclient.MetricRequestModel() # MetricRequestModel | 
+
+try:
+    # Query metrics.
+    api_response = api_instance.query_datasource(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DatasourcesApi->query_datasource: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**MetricRequestModel**](MetricRequestModel.md)|  | 
+
+### Return type
+
+[**DataResponseModel**](DataResponseModel.md)
 
 ### Authorization
 

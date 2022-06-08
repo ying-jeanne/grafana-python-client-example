@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created** | **datetime** |  | [optional] 
-**dashboard** | [**JsonModel**](JsonModel.md) |  | [optional] 
+**dashboard** | [**DashboardModel**](DashboardModel.md) |  | [optional] 
 **dashboard_encrypted** | **list[int]** |  | [optional] 
 **delete_key** | **str** |  | [optional] 
 **expires** | **datetime** |  | [optional] 

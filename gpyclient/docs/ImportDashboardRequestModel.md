@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**dashboard** | [**JsonModel**](JsonModel.md) |  | [optional] 
+**dashboard** | [**DashboardModel**](DashboardModel.md) |  | [optional] 
 **folder_id** | **int** |  | [optional] 
 **folder_uid** | **str** |  | [optional] 
 **inputs** | [**list[ImportDashboardInputModel]**](ImportDashboardInputModel.md) |  | [optional] 

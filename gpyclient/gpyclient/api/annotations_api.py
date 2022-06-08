@@ -330,43 +330,41 @@ class AnnotationsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_annotation(self, annotation_id, **kwargs):  # noqa: E501
+    def get_annotation(self, **kwargs):  # noqa: E501
         """Get Annotation by Id.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_annotation(annotation_id, async_req=True)
+        >>> thread = api.get_annotation(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str annotation_id: (required)
         :return: ItemDTOModel
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_annotation_with_http_info(annotation_id, **kwargs)  # noqa: E501
+            return self.get_annotation_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.get_annotation_with_http_info(annotation_id, **kwargs)  # noqa: E501
+            (data) = self.get_annotation_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def get_annotation_with_http_info(self, annotation_id, **kwargs):  # noqa: E501
+    def get_annotation_with_http_info(self, **kwargs):  # noqa: E501
         """Get Annotation by Id.  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_annotation_with_http_info(annotation_id, async_req=True)
+        >>> thread = api.get_annotation_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str annotation_id: (required)
         :return: ItemDTOModel
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['annotation_id']  # noqa: E501
+        all_params = []  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -381,16 +379,10 @@ class AnnotationsApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'annotation_id' is set
-        if self.api_client.client_side_validation and ('annotation_id' not in params or
-                                                       params['annotation_id'] is None):  # noqa: E501
-            raise ValueError("Missing the required parameter `annotation_id` when calling `get_annotation`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'annotation_id' in params:
-            path_params['annotation_id'] = params['annotation_id']  # noqa: E501
 
         query_params = []
 

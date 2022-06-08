@@ -41,6 +41,7 @@ class DataSourceListItemDTOModel(object):
         'json_data': 'JsonModel',
         'name': 'str',
         'org_id': 'int',
+        'password': 'str',
         'read_only': 'bool',
         'type': 'str',
         'type_logo_url': 'str',
@@ -59,6 +60,7 @@ class DataSourceListItemDTOModel(object):
         'json_data': 'jsonData',
         'name': 'name',
         'org_id': 'orgId',
+        'password': 'password',
         'read_only': 'readOnly',
         'type': 'type',
         'type_logo_url': 'typeLogoUrl',
@@ -68,7 +70,7 @@ class DataSourceListItemDTOModel(object):
         'user': 'user'
     }
 
-    def __init__(self, access=None, basic_auth=None, database=None, id=None, is_default=None, json_data=None, name=None, org_id=None, read_only=None, type=None, type_logo_url=None, type_name=None, uid=None, url=None, user=None, _configuration=None):  # noqa: E501
+    def __init__(self, access=None, basic_auth=None, database=None, id=None, is_default=None, json_data=None, name=None, org_id=None, password=None, read_only=None, type=None, type_logo_url=None, type_name=None, uid=None, url=None, user=None, _configuration=None):  # noqa: E501
         """DataSourceListItemDTOModel - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -82,6 +84,7 @@ class DataSourceListItemDTOModel(object):
         self._json_data = None
         self._name = None
         self._org_id = None
+        self._password = None
         self._read_only = None
         self._type = None
         self._type_logo_url = None
@@ -107,6 +110,8 @@ class DataSourceListItemDTOModel(object):
             self.name = name
         if org_id is not None:
             self.org_id = org_id
+        if password is not None:
+            self.password = password
         if read_only is not None:
             self.read_only = read_only
         if type is not None:
@@ -289,6 +294,27 @@ class DataSourceListItemDTOModel(object):
         """
 
         self._org_id = org_id
+
+    @property
+    def password(self):
+        """Gets the password of this DataSourceListItemDTOModel.  # noqa: E501
+
+
+        :return: The password of this DataSourceListItemDTOModel.  # noqa: E501
+        :rtype: str
+        """
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        """Sets the password of this DataSourceListItemDTOModel.
+
+
+        :param password: The password of this DataSourceListItemDTOModel.  # noqa: E501
+        :type: str
+        """
+
+        self._password = password
 
     @property
     def read_only(self):

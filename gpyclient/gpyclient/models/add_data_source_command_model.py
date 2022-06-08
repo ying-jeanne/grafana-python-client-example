@@ -35,11 +35,13 @@ class AddDataSourceCommandModel(object):
     swagger_types = {
         'access': 'DsAccessModel',
         'basic_auth': 'bool',
+        'basic_auth_password': 'str',
         'basic_auth_user': 'str',
         'database': 'str',
         'is_default': 'bool',
         'json_data': 'JsonModel',
         'name': 'str',
+        'password': 'str',
         'secure_json_data': 'dict(str, str)',
         'type': 'str',
         'uid': 'str',
@@ -51,11 +53,13 @@ class AddDataSourceCommandModel(object):
     attribute_map = {
         'access': 'access',
         'basic_auth': 'basicAuth',
+        'basic_auth_password': 'basicAuthPassword',
         'basic_auth_user': 'basicAuthUser',
         'database': 'database',
         'is_default': 'isDefault',
         'json_data': 'jsonData',
         'name': 'name',
+        'password': 'password',
         'secure_json_data': 'secureJsonData',
         'type': 'type',
         'uid': 'uid',
@@ -64,7 +68,7 @@ class AddDataSourceCommandModel(object):
         'with_credentials': 'withCredentials'
     }
 
-    def __init__(self, access=None, basic_auth=None, basic_auth_user=None, database=None, is_default=None, json_data=None, name=None, secure_json_data=None, type=None, uid=None, url=None, user=None, with_credentials=None, _configuration=None):  # noqa: E501
+    def __init__(self, access=None, basic_auth=None, basic_auth_password=None, basic_auth_user=None, database=None, is_default=None, json_data=None, name=None, password=None, secure_json_data=None, type=None, uid=None, url=None, user=None, with_credentials=None, _configuration=None):  # noqa: E501
         """AddDataSourceCommandModel - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -72,11 +76,13 @@ class AddDataSourceCommandModel(object):
 
         self._access = None
         self._basic_auth = None
+        self._basic_auth_password = None
         self._basic_auth_user = None
         self._database = None
         self._is_default = None
         self._json_data = None
         self._name = None
+        self._password = None
         self._secure_json_data = None
         self._type = None
         self._uid = None
@@ -89,6 +95,8 @@ class AddDataSourceCommandModel(object):
             self.access = access
         if basic_auth is not None:
             self.basic_auth = basic_auth
+        if basic_auth_password is not None:
+            self.basic_auth_password = basic_auth_password
         if basic_auth_user is not None:
             self.basic_auth_user = basic_auth_user
         if database is not None:
@@ -99,6 +107,8 @@ class AddDataSourceCommandModel(object):
             self.json_data = json_data
         if name is not None:
             self.name = name
+        if password is not None:
+            self.password = password
         if secure_json_data is not None:
             self.secure_json_data = secure_json_data
         if type is not None:
@@ -153,6 +163,27 @@ class AddDataSourceCommandModel(object):
         """
 
         self._basic_auth = basic_auth
+
+    @property
+    def basic_auth_password(self):
+        """Gets the basic_auth_password of this AddDataSourceCommandModel.  # noqa: E501
+
+
+        :return: The basic_auth_password of this AddDataSourceCommandModel.  # noqa: E501
+        :rtype: str
+        """
+        return self._basic_auth_password
+
+    @basic_auth_password.setter
+    def basic_auth_password(self, basic_auth_password):
+        """Sets the basic_auth_password of this AddDataSourceCommandModel.
+
+
+        :param basic_auth_password: The basic_auth_password of this AddDataSourceCommandModel.  # noqa: E501
+        :type: str
+        """
+
+        self._basic_auth_password = basic_auth_password
 
     @property
     def basic_auth_user(self):
@@ -258,6 +289,27 @@ class AddDataSourceCommandModel(object):
         """
 
         self._name = name
+
+    @property
+    def password(self):
+        """Gets the password of this AddDataSourceCommandModel.  # noqa: E501
+
+
+        :return: The password of this AddDataSourceCommandModel.  # noqa: E501
+        :rtype: str
+        """
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        """Sets the password of this AddDataSourceCommandModel.
+
+
+        :param password: The password of this AddDataSourceCommandModel.  # noqa: E501
+        :type: str
+        """
+
+        self._password = password
 
     @property
     def secure_json_data(self):

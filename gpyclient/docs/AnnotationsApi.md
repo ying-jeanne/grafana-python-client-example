@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_annotation**
-> ItemDTOModel get_annotation(annotation_id)
+> ItemDTOModel get_annotation()
 
 Get Annotation by Id.
 
@@ -214,21 +214,17 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gpyclient.AnnotationsApi(gpyclient.ApiClient(configuration))
-annotation_id = 'annotation_id_example' # str | 
 
 try:
     # Get Annotation by Id.
-    api_response = api_instance.get_annotation(annotation_id)
+    api_response = api_instance.get_annotation()
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AnnotationsApi->get_annotation: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **annotation_id** | **str**|  | 
+This endpoint does not need any parameter.
 
 ### Return type
 

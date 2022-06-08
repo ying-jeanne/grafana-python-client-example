@@ -36,7 +36,7 @@ class DashboardVersionMetaModel(object):
         'created': 'datetime',
         'created_by': 'str',
         'dashboard_id': 'int',
-        'data': 'JsonModel',
+        'data': 'DashboardModel',
         'id': 'int',
         'message': 'str',
         'parent_version': 'int',
@@ -166,7 +166,7 @@ class DashboardVersionMetaModel(object):
 
 
         :return: The data of this DashboardVersionMetaModel.  # noqa: E501
-        :rtype: JsonModel
+        :rtype: DashboardModel
         """
         return self._data
 
@@ -176,7 +176,7 @@ class DashboardVersionMetaModel(object):
 
 
         :param data: The data of this DashboardVersionMetaModel.  # noqa: E501
-        :type: JsonModel
+        :type: DashboardModel
         """
 
         self._data = data

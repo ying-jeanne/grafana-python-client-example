@@ -36,6 +36,7 @@ class DataSourceModel(object):
         'access': 'DsAccessModel',
         'access_control': 'MetadataModel',
         'basic_auth': 'bool',
+        'basic_auth_password': 'str',
         'basic_auth_user': 'str',
         'database': 'str',
         'id': 'int',
@@ -43,6 +44,7 @@ class DataSourceModel(object):
         'json_data': 'JsonModel',
         'name': 'str',
         'org_id': 'int',
+        'password': 'str',
         'read_only': 'bool',
         'secure_json_fields': 'dict(str, bool)',
         'type': 'str',
@@ -58,6 +60,7 @@ class DataSourceModel(object):
         'access': 'access',
         'access_control': 'accessControl',
         'basic_auth': 'basicAuth',
+        'basic_auth_password': 'basicAuthPassword',
         'basic_auth_user': 'basicAuthUser',
         'database': 'database',
         'id': 'id',
@@ -65,6 +68,7 @@ class DataSourceModel(object):
         'json_data': 'jsonData',
         'name': 'name',
         'org_id': 'orgId',
+        'password': 'password',
         'read_only': 'readOnly',
         'secure_json_fields': 'secureJsonFields',
         'type': 'type',
@@ -76,7 +80,7 @@ class DataSourceModel(object):
         'with_credentials': 'withCredentials'
     }
 
-    def __init__(self, access=None, access_control=None, basic_auth=None, basic_auth_user=None, database=None, id=None, is_default=None, json_data=None, name=None, org_id=None, read_only=None, secure_json_fields=None, type=None, type_logo_url=None, uid=None, url=None, user=None, version=None, with_credentials=None, _configuration=None):  # noqa: E501
+    def __init__(self, access=None, access_control=None, basic_auth=None, basic_auth_password=None, basic_auth_user=None, database=None, id=None, is_default=None, json_data=None, name=None, org_id=None, password=None, read_only=None, secure_json_fields=None, type=None, type_logo_url=None, uid=None, url=None, user=None, version=None, with_credentials=None, _configuration=None):  # noqa: E501
         """DataSourceModel - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -85,6 +89,7 @@ class DataSourceModel(object):
         self._access = None
         self._access_control = None
         self._basic_auth = None
+        self._basic_auth_password = None
         self._basic_auth_user = None
         self._database = None
         self._id = None
@@ -92,6 +97,7 @@ class DataSourceModel(object):
         self._json_data = None
         self._name = None
         self._org_id = None
+        self._password = None
         self._read_only = None
         self._secure_json_fields = None
         self._type = None
@@ -109,6 +115,8 @@ class DataSourceModel(object):
             self.access_control = access_control
         if basic_auth is not None:
             self.basic_auth = basic_auth
+        if basic_auth_password is not None:
+            self.basic_auth_password = basic_auth_password
         if basic_auth_user is not None:
             self.basic_auth_user = basic_auth_user
         if database is not None:
@@ -123,6 +131,8 @@ class DataSourceModel(object):
             self.name = name
         if org_id is not None:
             self.org_id = org_id
+        if password is not None:
+            self.password = password
         if read_only is not None:
             self.read_only = read_only
         if secure_json_fields is not None:
@@ -204,6 +214,27 @@ class DataSourceModel(object):
         """
 
         self._basic_auth = basic_auth
+
+    @property
+    def basic_auth_password(self):
+        """Gets the basic_auth_password of this DataSourceModel.  # noqa: E501
+
+
+        :return: The basic_auth_password of this DataSourceModel.  # noqa: E501
+        :rtype: str
+        """
+        return self._basic_auth_password
+
+    @basic_auth_password.setter
+    def basic_auth_password(self, basic_auth_password):
+        """Sets the basic_auth_password of this DataSourceModel.
+
+
+        :param basic_auth_password: The basic_auth_password of this DataSourceModel.  # noqa: E501
+        :type: str
+        """
+
+        self._basic_auth_password = basic_auth_password
 
     @property
     def basic_auth_user(self):
@@ -351,6 +382,27 @@ class DataSourceModel(object):
         """
 
         self._org_id = org_id
+
+    @property
+    def password(self):
+        """Gets the password of this DataSourceModel.  # noqa: E501
+
+
+        :return: The password of this DataSourceModel.  # noqa: E501
+        :rtype: str
+        """
+        return self._password
+
+    @password.setter
+    def password(self, password):
+        """Sets the password of this DataSourceModel.
+
+
+        :param password: The password of this DataSourceModel.  # noqa: E501
+        :type: str
+        """
+
+        self._password = password
 
     @property
     def read_only(self):

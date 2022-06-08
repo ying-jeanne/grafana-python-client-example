@@ -34,7 +34,7 @@ class DashboardSnapshotModel(object):
     """
     swagger_types = {
         'created': 'datetime',
-        'dashboard': 'JsonModel',
+        'dashboard': 'DashboardModel',
         'dashboard_encrypted': 'list[int]',
         'delete_key': 'str',
         'expires': 'datetime',
@@ -144,7 +144,7 @@ class DashboardSnapshotModel(object):
 
 
         :return: The dashboard of this DashboardSnapshotModel.  # noqa: E501
-        :rtype: JsonModel
+        :rtype: DashboardModel
         """
         return self._dashboard
 
@@ -154,7 +154,7 @@ class DashboardSnapshotModel(object):
 
 
         :param dashboard: The dashboard of this DashboardSnapshotModel.  # noqa: E501
-        :type: JsonModel
+        :type: DashboardModel
         """
 
         self._dashboard = dashboard

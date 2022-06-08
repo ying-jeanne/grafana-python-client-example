@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **created** | **datetime** |  | [optional] 
 **created_by** | **str** |  | [optional] 
 **dashboard_id** | **int** |  | [optional] 
-**data** | [**JsonModel**](JsonModel.md) |  | [optional] 
+**data** | [**DashboardModel**](DashboardModel.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 **message** | **str** |  | [optional] 
 **parent_version** | **int** |  | [optional] 

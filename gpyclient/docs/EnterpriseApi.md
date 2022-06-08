@@ -15,19 +15,19 @@ Method | HTTP request | Description
 [**create_role_with_permissions**](EnterpriseApi.md#create_role_with_permissions) | **POST** /access-control/roles | Create a new custom role.
 [**delete_custom_role**](EnterpriseApi.md#delete_custom_role) | **DELETE** /access-control/roles/{roleUID} | Delete a custom role.
 [**delete_license_token**](EnterpriseApi.md#delete_license_token) | **DELETE** /licensing/token | Remove license from database.
-[**delete_permissions**](EnterpriseApi.md#delete_permissions) | **DELETE** /datasources/{datasourceId}/permissions/{permissionId} | Remove permission for a data source.
+[**delete_permissions**](EnterpriseApi.md#delete_permissions) | **DELETE** /datasources/{datasource_id}/permissions/{permissionId} | Remove permission for a data source.
 [**delete_recording_rule**](EnterpriseApi.md#delete_recording_rule) | **DELETE** /recording-rules/{recordingRuleID} | Delete a recording rule.
 [**delete_recording_rule_write_target**](EnterpriseApi.md#delete_recording_rule_write_target) | **DELETE** /recording-rules/writer | Delete the write target.
 [**delete_report**](EnterpriseApi.md#delete_report) | **DELETE** /reports/{reportID} | Delete a report.
-[**disable_permissions**](EnterpriseApi.md#disable_permissions) | **POST** /datasources/{datasourceId}/disable-permissions | Disable permissions for a data source.
-[**enable_permissions**](EnterpriseApi.md#enable_permissions) | **POST** /datasources/{datasourceId}/enable-permissions | Enable permissions for a data source.
+[**disable_permissions**](EnterpriseApi.md#disable_permissions) | **POST** /datasources/{datasource_id}/disable-permissions | Disable permissions for a data source.
+[**enable_permissions**](EnterpriseApi.md#enable_permissions) | **POST** /datasources/{datasource_id}/enable-permissions | Enable permissions for a data source.
 [**get_access_control_status**](EnterpriseApi.md#get_access_control_status) | **GET** /access-control/status | Get status.
 [**get_all_roles**](EnterpriseApi.md#get_all_roles) | **GET** /access-control/roles | Get all roles.
 [**get_custom_permissions_csv**](EnterpriseApi.md#get_custom_permissions_csv) | **GET** /licensing/custom-permissions-csv | Get custom permissions report in CSV format.
 [**get_custom_permissions_report**](EnterpriseApi.md#get_custom_permissions_report) | **GET** /licensing/custom-permissions | Get custom permissions report.
 [**get_license_status**](EnterpriseApi.md#get_license_status) | **GET** /licensing/check | Check license availability.
 [**get_license_token**](EnterpriseApi.md#get_license_token) | **GET** /licensing/token | Get license token.
-[**get_permissions**](EnterpriseApi.md#get_permissions) | **GET** /datasources/{datasourceId}/permissions | Get permissions for a data source.
+[**get_permissions**](EnterpriseApi.md#get_permissions) | **GET** /datasources/{datasource_id}/permissions | Get permissions for a data source.
 [**get_recording_rule_write_target**](EnterpriseApi.md#get_recording_rule_write_target) | **GET** /recording-rules/writer | Get the write target.
 [**get_report**](EnterpriseApi.md#get_report) | **GET** /reports/{reportID} | Get a report.
 [**get_report_settings**](EnterpriseApi.md#get_report_settings) | **GET** /reports/settings | Get settings.
@@ -696,7 +696,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_permissions**
-> SuccessResponseBodyModel delete_permissions(datasource_id, permission_id)
+> SuccessResponseBodyModel delete_permissions(id, permission_id)
 
 Remove permission for a data source.
 
@@ -722,12 +722,12 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gpyclient.EnterpriseApi(gpyclient.ApiClient(configuration))
-datasource_id = 'datasource_id_example' # str | 
+id = 'id_example' # str | 
 permission_id = 'permission_id_example' # str | 
 
 try:
     # Remove permission for a data source.
-    api_response = api_instance.delete_permissions(datasource_id, permission_id)
+    api_response = api_instance.delete_permissions(id, permission_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EnterpriseApi->delete_permissions: %s\n" % e)
@@ -737,7 +737,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datasource_id** | **str**|  | 
+ **id** | **str**|  | 
  **permission_id** | **str**|  | 
 
 ### Return type
@@ -922,7 +922,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **disable_permissions**
-> InlineResponse2006Model disable_permissions(datasource_id)
+> InlineResponse2006Model disable_permissions(id)
 
 Disable permissions for a data source.
 
@@ -948,11 +948,11 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gpyclient.EnterpriseApi(gpyclient.ApiClient(configuration))
-datasource_id = 'datasource_id_example' # str | 
+id = 'id_example' # str | 
 
 try:
     # Disable permissions for a data source.
-    api_response = api_instance.disable_permissions(datasource_id)
+    api_response = api_instance.disable_permissions(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EnterpriseApi->disable_permissions: %s\n" % e)
@@ -962,7 +962,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datasource_id** | **str**|  | 
+ **id** | **str**|  | 
 
 ### Return type
 
@@ -980,7 +980,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **enable_permissions**
-> InlineResponse2006Model enable_permissions(datasource_id)
+> InlineResponse2006Model enable_permissions(id)
 
 Enable permissions for a data source.
 
@@ -1006,11 +1006,11 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gpyclient.EnterpriseApi(gpyclient.ApiClient(configuration))
-datasource_id = 'datasource_id_example' # str | 
+id = 'id_example' # str | 
 
 try:
     # Enable permissions for a data source.
-    api_response = api_instance.enable_permissions(datasource_id)
+    api_response = api_instance.enable_permissions(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EnterpriseApi->enable_permissions: %s\n" % e)
@@ -1020,7 +1020,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datasource_id** | **str**|  | 
+ **id** | **str**|  | 
 
 ### Return type
 
@@ -1359,7 +1359,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_permissions**
-> AddPermissionDTOModel get_permissions(datasource_id)
+> AddPermissionDTOModel get_permissions(id)
 
 Get permissions for a data source.
 
@@ -1385,11 +1385,11 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = gpyclient.EnterpriseApi(gpyclient.ApiClient(configuration))
-datasource_id = 'datasource_id_example' # str | 
+id = 'id_example' # str | 
 
 try:
     # Get permissions for a data source.
-    api_response = api_instance.get_permissions(datasource_id)
+    api_response = api_instance.get_permissions(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling EnterpriseApi->get_permissions: %s\n" % e)
@@ -1399,7 +1399,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datasource_id** | **str**|  | 
+ **id** | **str**|  | 
 
 ### Return type
 

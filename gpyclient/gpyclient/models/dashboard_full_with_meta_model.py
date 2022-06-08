@@ -33,7 +33,7 @@ class DashboardFullWithMetaModel(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'dashboard': 'JsonModel',
+        'dashboard': 'DashboardModel',
         'meta': 'DashboardMetaModel'
     }
 
@@ -63,7 +63,7 @@ class DashboardFullWithMetaModel(object):
 
 
         :return: The dashboard of this DashboardFullWithMetaModel.  # noqa: E501
-        :rtype: JsonModel
+        :rtype: DashboardModel
         """
         return self._dashboard
 
@@ -73,7 +73,7 @@ class DashboardFullWithMetaModel(object):
 
 
         :param dashboard: The dashboard of this DashboardFullWithMetaModel.  # noqa: E501
-        :type: JsonModel
+        :type: DashboardModel
         """
 
         self._dashboard = dashboard

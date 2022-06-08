@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **dashboards** | [**list[DashboardDTOModel]**](DashboardDTOModel.md) |  | [optional] 
 **enable_csv** | **bool** |  | [optional] 
 **enable_dashboard_url** | **bool** |  | [optional] 
-**formats** | [**list[TypeModel]**](TypeModel.md) |  | [optional] 
 **id** | **int** |  | [optional] 
 **message** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 

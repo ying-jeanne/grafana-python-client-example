@@ -33,7 +33,7 @@ class ImportDashboardRequestModel(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'dashboard': 'JsonModel',
+        'dashboard': 'DashboardModel',
         'folder_id': 'int',
         'folder_uid': 'str',
         'inputs': 'list[ImportDashboardInputModel]',
@@ -88,7 +88,7 @@ class ImportDashboardRequestModel(object):
 
 
         :return: The dashboard of this ImportDashboardRequestModel.  # noqa: E501
-        :rtype: JsonModel
+        :rtype: DashboardModel
         """
         return self._dashboard
 
@@ -98,7 +98,7 @@ class ImportDashboardRequestModel(object):
 
 
         :param dashboard: The dashboard of this ImportDashboardRequestModel.  # noqa: E501
-        :type: JsonModel
+        :type: DashboardModel
         """
 
         self._dashboard = dashboard

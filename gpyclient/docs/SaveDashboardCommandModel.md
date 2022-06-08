@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **updated_at** | **datetime** |  | [optional] 
-**dashboard** | [**JsonModel**](JsonModel.md) |  | [optional] 
+**dashboard** | [**DashboardModel**](DashboardModel.md) |  | [optional] 
 **folder_id** | **int** |  | [optional] 
 **folder_uid** | **str** |  | [optional] 
 **is_folder** | **bool** |  | [optional] 

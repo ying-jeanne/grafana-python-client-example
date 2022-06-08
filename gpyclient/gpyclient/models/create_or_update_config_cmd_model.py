@@ -38,7 +38,6 @@ class CreateOrUpdateConfigCmdModel(object):
         'dashboards': 'list[DashboardDTOModel]',
         'enable_csv': 'bool',
         'enable_dashboard_url': 'bool',
-        'formats': 'list[TypeModel]',
         'message': 'str',
         'name': 'str',
         'options': 'ReportOptionsDTOModel',
@@ -55,7 +54,6 @@ class CreateOrUpdateConfigCmdModel(object):
         'dashboards': 'dashboards',
         'enable_csv': 'enableCsv',
         'enable_dashboard_url': 'enableDashboardUrl',
-        'formats': 'formats',
         'message': 'message',
         'name': 'name',
         'options': 'options',
@@ -66,7 +64,7 @@ class CreateOrUpdateConfigCmdModel(object):
         'template_vars': 'templateVars'
     }
 
-    def __init__(self, dashboard_id=None, dashboard_uid=None, dashboards=None, enable_csv=None, enable_dashboard_url=None, formats=None, message=None, name=None, options=None, recipients=None, reply_to=None, schedule=None, state=None, template_vars=None, _configuration=None):  # noqa: E501
+    def __init__(self, dashboard_id=None, dashboard_uid=None, dashboards=None, enable_csv=None, enable_dashboard_url=None, message=None, name=None, options=None, recipients=None, reply_to=None, schedule=None, state=None, template_vars=None, _configuration=None):  # noqa: E501
         """CreateOrUpdateConfigCmdModel - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -77,7 +75,6 @@ class CreateOrUpdateConfigCmdModel(object):
         self._dashboards = None
         self._enable_csv = None
         self._enable_dashboard_url = None
-        self._formats = None
         self._message = None
         self._name = None
         self._options = None
@@ -98,8 +95,6 @@ class CreateOrUpdateConfigCmdModel(object):
             self.enable_csv = enable_csv
         if enable_dashboard_url is not None:
             self.enable_dashboard_url = enable_dashboard_url
-        if formats is not None:
-            self.formats = formats
         if message is not None:
             self.message = message
         if name is not None:
@@ -221,27 +216,6 @@ class CreateOrUpdateConfigCmdModel(object):
         """
 
         self._enable_dashboard_url = enable_dashboard_url
-
-    @property
-    def formats(self):
-        """Gets the formats of this CreateOrUpdateConfigCmdModel.  # noqa: E501
-
-
-        :return: The formats of this CreateOrUpdateConfigCmdModel.  # noqa: E501
-        :rtype: list[TypeModel]
-        """
-        return self._formats
-
-    @formats.setter
-    def formats(self, formats):
-        """Sets the formats of this CreateOrUpdateConfigCmdModel.
-
-
-        :param formats: The formats of this CreateOrUpdateConfigCmdModel.  # noqa: E501
-        :type: list[TypeModel]
-        """
-
-        self._formats = formats
 
     @property
     def message(self):

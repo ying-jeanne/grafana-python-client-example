@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **json_data** | [**JsonModel**](JsonModel.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **org_id** | **int** |  | [optional] 
+**password** | **str** |  | [optional] 
 **read_only** | **bool** |  | [optional] 
 **type** | **str** |  | [optional] 
 **type_logo_url** | **str** |  | [optional] 

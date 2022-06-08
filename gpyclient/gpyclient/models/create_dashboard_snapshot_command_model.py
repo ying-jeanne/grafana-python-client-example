@@ -34,7 +34,7 @@ class CreateDashboardSnapshotCommandModel(object):
     """
     swagger_types = {
         'result': 'DashboardSnapshotModel',
-        'dashboard': 'JsonModel',
+        'dashboard': 'DashboardModel',
         'delete_key': 'str',
         'expires': 'int',
         'external': 'bool',
@@ -108,7 +108,7 @@ class CreateDashboardSnapshotCommandModel(object):
 
 
         :return: The dashboard of this CreateDashboardSnapshotCommandModel.  # noqa: E501
-        :rtype: JsonModel
+        :rtype: DashboardModel
         """
         return self._dashboard
 
@@ -118,7 +118,7 @@ class CreateDashboardSnapshotCommandModel(object):
 
 
         :param dashboard: The dashboard of this CreateDashboardSnapshotCommandModel.  # noqa: E501
-        :type: JsonModel
+        :type: DashboardModel
         """
         if self._configuration.client_side_validation and dashboard is None:
             raise ValueError("Invalid value for `dashboard`, must not be `None`")  # noqa: E501

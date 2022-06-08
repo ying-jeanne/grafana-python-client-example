@@ -160,10 +160,10 @@ Class | Method | HTTP request | Description
 *DashboardsApi* | [**import_dashboard**](docs/DashboardsApi.md#import_dashboard) | **POST** /dashboards/import | Import dashboard.
 *DashboardsApi* | [**post_dashboard**](docs/DashboardsApi.md#post_dashboard) | **POST** /dashboards/db | Create / Update dashboard
 *DashboardsApi* | [**trim_dashboard**](docs/DashboardsApi.md#trim_dashboard) | **POST** /dashboards/trim | Trim defaults from dashboard.
-*DatasourcePermissionsApi* | [**delete_permissions**](docs/DatasourcePermissionsApi.md#delete_permissions) | **DELETE** /datasources/{datasourceId}/permissions/{permissionId} | Remove permission for a data source.
-*DatasourcePermissionsApi* | [**disable_permissions**](docs/DatasourcePermissionsApi.md#disable_permissions) | **POST** /datasources/{datasourceId}/disable-permissions | Disable permissions for a data source.
-*DatasourcePermissionsApi* | [**enable_permissions**](docs/DatasourcePermissionsApi.md#enable_permissions) | **POST** /datasources/{datasourceId}/enable-permissions | Enable permissions for a data source.
-*DatasourcePermissionsApi* | [**get_permissions**](docs/DatasourcePermissionsApi.md#get_permissions) | **GET** /datasources/{datasourceId}/permissions | Get permissions for a data source.
+*DatasourcePermissionsApi* | [**delete_permissions**](docs/DatasourcePermissionsApi.md#delete_permissions) | **DELETE** /datasources/{datasource_id}/permissions/{permissionId} | Remove permission for a data source.
+*DatasourcePermissionsApi* | [**disable_permissions**](docs/DatasourcePermissionsApi.md#disable_permissions) | **POST** /datasources/{datasource_id}/disable-permissions | Disable permissions for a data source.
+*DatasourcePermissionsApi* | [**enable_permissions**](docs/DatasourcePermissionsApi.md#enable_permissions) | **POST** /datasources/{datasource_id}/enable-permissions | Enable permissions for a data source.
+*DatasourcePermissionsApi* | [**get_permissions**](docs/DatasourcePermissionsApi.md#get_permissions) | **GET** /datasources/{datasource_id}/permissions | Get permissions for a data source.
 *DatasourcesApi* | [**add_datasource**](docs/DatasourcesApi.md#add_datasource) | **POST** /datasources | Create a data source.
 *DatasourcesApi* | [**check_datasource_health**](docs/DatasourcesApi.md#check_datasource_health) | **GET** /datasources/uid/{uid}/health | Check data source health by Id.
 *DatasourcesApi* | [**check_datasource_health_by_id**](docs/DatasourcesApi.md#check_datasource_health_by_id) | **GET** /datasources/{id}/health | Check data source health by Id.
@@ -183,6 +183,7 @@ Class | Method | HTTP request | Description
 *DatasourcesApi* | [**get_datasource_by_uid**](docs/DatasourcesApi.md#get_datasource_by_uid) | **GET** /datasources/uid/{uid} | Get a single data source by UID.
 *DatasourcesApi* | [**get_datasource_id_by_name**](docs/DatasourcesApi.md#get_datasource_id_by_name) | **GET** /datasources/id/{name} | Get data source Id by Name.
 *DatasourcesApi* | [**get_datasources**](docs/DatasourcesApi.md#get_datasources) | **GET** /datasources | Get all data sources.
+*DatasourcesApi* | [**query_datasource**](docs/DatasourcesApi.md#query_datasource) | **POST** /tsdb/query | Query metrics.
 *DatasourcesApi* | [**update_datasource_by_id**](docs/DatasourcesApi.md#update_datasource_by_id) | **PUT** /datasources/{id} | Update an existing data source by its sequential ID.
 *DatasourcesApi* | [**update_datasource_by_uid**](docs/DatasourcesApi.md#update_datasource_by_uid) | **PUT** /datasources/uid/{uid} | Update an existing data source.
 *DsApi* | [**query_metrics_with_expressions**](docs/DsApi.md#query_metrics_with_expressions) | **POST** /ds/query | Query metrics with expressions
@@ -197,19 +198,19 @@ Class | Method | HTTP request | Description
 *EnterpriseApi* | [**create_role_with_permissions**](docs/EnterpriseApi.md#create_role_with_permissions) | **POST** /access-control/roles | Create a new custom role.
 *EnterpriseApi* | [**delete_custom_role**](docs/EnterpriseApi.md#delete_custom_role) | **DELETE** /access-control/roles/{roleUID} | Delete a custom role.
 *EnterpriseApi* | [**delete_license_token**](docs/EnterpriseApi.md#delete_license_token) | **DELETE** /licensing/token | Remove license from database.
-*EnterpriseApi* | [**delete_permissions**](docs/EnterpriseApi.md#delete_permissions) | **DELETE** /datasources/{datasourceId}/permissions/{permissionId} | Remove permission for a data source.
+*EnterpriseApi* | [**delete_permissions**](docs/EnterpriseApi.md#delete_permissions) | **DELETE** /datasources/{datasource_id}/permissions/{permissionId} | Remove permission for a data source.
 *EnterpriseApi* | [**delete_recording_rule**](docs/EnterpriseApi.md#delete_recording_rule) | **DELETE** /recording-rules/{recordingRuleID} | Delete a recording rule.
 *EnterpriseApi* | [**delete_recording_rule_write_target**](docs/EnterpriseApi.md#delete_recording_rule_write_target) | **DELETE** /recording-rules/writer | Delete the write target.
 *EnterpriseApi* | [**delete_report**](docs/EnterpriseApi.md#delete_report) | **DELETE** /reports/{reportID} | Delete a report.
-*EnterpriseApi* | [**disable_permissions**](docs/EnterpriseApi.md#disable_permissions) | **POST** /datasources/{datasourceId}/disable-permissions | Disable permissions for a data source.
-*EnterpriseApi* | [**enable_permissions**](docs/EnterpriseApi.md#enable_permissions) | **POST** /datasources/{datasourceId}/enable-permissions | Enable permissions for a data source.
+*EnterpriseApi* | [**disable_permissions**](docs/EnterpriseApi.md#disable_permissions) | **POST** /datasources/{datasource_id}/disable-permissions | Disable permissions for a data source.
+*EnterpriseApi* | [**enable_permissions**](docs/EnterpriseApi.md#enable_permissions) | **POST** /datasources/{datasource_id}/enable-permissions | Enable permissions for a data source.
 *EnterpriseApi* | [**get_access_control_status**](docs/EnterpriseApi.md#get_access_control_status) | **GET** /access-control/status | Get status.
 *EnterpriseApi* | [**get_all_roles**](docs/EnterpriseApi.md#get_all_roles) | **GET** /access-control/roles | Get all roles.
 *EnterpriseApi* | [**get_custom_permissions_csv**](docs/EnterpriseApi.md#get_custom_permissions_csv) | **GET** /licensing/custom-permissions-csv | Get custom permissions report in CSV format.
 *EnterpriseApi* | [**get_custom_permissions_report**](docs/EnterpriseApi.md#get_custom_permissions_report) | **GET** /licensing/custom-permissions | Get custom permissions report.
 *EnterpriseApi* | [**get_license_status**](docs/EnterpriseApi.md#get_license_status) | **GET** /licensing/check | Check license availability.
 *EnterpriseApi* | [**get_license_token**](docs/EnterpriseApi.md#get_license_token) | **GET** /licensing/token | Get license token.
-*EnterpriseApi* | [**get_permissions**](docs/EnterpriseApi.md#get_permissions) | **GET** /datasources/{datasourceId}/permissions | Get permissions for a data source.
+*EnterpriseApi* | [**get_permissions**](docs/EnterpriseApi.md#get_permissions) | **GET** /datasources/{datasource_id}/permissions | Get permissions for a data source.
 *EnterpriseApi* | [**get_recording_rule_write_target**](docs/EnterpriseApi.md#get_recording_rule_write_target) | **GET** /recording-rules/writer | Get the write target.
 *EnterpriseApi* | [**get_report**](docs/EnterpriseApi.md#get_report) | **GET** /reports/{reportID} | Get a report.
 *EnterpriseApi* | [**get_report_settings**](docs/EnterpriseApi.md#get_report_settings) | **GET** /reports/settings | Get settings.
@@ -425,7 +426,6 @@ Class | Method | HTTP request | Description
  - [CalculateDiffTargetModel](docs/CalculateDiffTargetModel.md)
  - [ChangeUserPasswordCommandModel](docs/ChangeUserPasswordCommandModel.md)
  - [ClusterStatusModel](docs/ClusterStatusModel.md)
- - [ConfFloat64Model](docs/ConfFloat64Model.md)
  - [ConfigDTOModel](docs/ConfigDTOModel.md)
  - [ConfigModel](docs/ConfigModel.md)
  - [CreateAlertNotificationCommandModel](docs/CreateAlertNotificationCommandModel.md)
@@ -439,21 +439,64 @@ Class | Method | HTTP request | Description
  - [CustomPermissionsRecordDTOModel](docs/CustomPermissionsRecordDTOModel.md)
  - [DashboardAclInfoDTOModel](docs/DashboardAclInfoDTOModel.md)
  - [DashboardAclUpdateItemModel](docs/DashboardAclUpdateItemModel.md)
+ - [DashboardAnnotationQueryDatasourceModel](docs/DashboardAnnotationQueryDatasourceModel.md)
+ - [DashboardAnnotationQueryModel](docs/DashboardAnnotationQueryModel.md)
+ - [DashboardAnnotationsModel](docs/DashboardAnnotationsModel.md)
  - [DashboardDTOModel](docs/DashboardDTOModel.md)
+ - [DashboardDashboardCursorSyncModel](docs/DashboardDashboardCursorSyncModel.md)
+ - [DashboardDashboardLinkModel](docs/DashboardDashboardLinkModel.md)
+ - [DashboardDashboardLinkTypeModel](docs/DashboardDashboardLinkTypeModel.md)
+ - [DashboardFieldColorModeIdModel](docs/DashboardFieldColorModeIdModel.md)
+ - [DashboardFieldColorModel](docs/DashboardFieldColorModel.md)
+ - [DashboardFieldColorSeriesByModeModel](docs/DashboardFieldColorSeriesByModeModel.md)
  - [DashboardFullWithMetaModel](docs/DashboardFullWithMetaModel.md)
+ - [DashboardGraphPanelModel](docs/DashboardGraphPanelModel.md)
+ - [DashboardHeatmapPanelModel](docs/DashboardHeatmapPanelModel.md)
  - [DashboardMetaModel](docs/DashboardMetaModel.md)
+ - [DashboardModel](docs/DashboardModel.md)
+ - [DashboardPanelDatasourceModel](docs/DashboardPanelDatasourceModel.md)
+ - [DashboardPanelFieldConfigDefaultsModel](docs/DashboardPanelFieldConfigDefaultsModel.md)
+ - [DashboardPanelFieldConfigMatcherModel](docs/DashboardPanelFieldConfigMatcherModel.md)
+ - [DashboardPanelFieldConfigModel](docs/DashboardPanelFieldConfigModel.md)
+ - [DashboardPanelFieldConfigOverridesModel](docs/DashboardPanelFieldConfigOverridesModel.md)
+ - [DashboardPanelFieldConfigPropertiesModel](docs/DashboardPanelFieldConfigPropertiesModel.md)
+ - [DashboardPanelGridPosModel](docs/DashboardPanelGridPosModel.md)
+ - [DashboardPanelModel](docs/DashboardPanelModel.md)
+ - [DashboardPanelTransformationsModel](docs/DashboardPanelTransformationsModel.md)
  - [DashboardRedirectModel](docs/DashboardRedirectModel.md)
  - [DashboardReportDTOModel](docs/DashboardReportDTOModel.md)
+ - [DashboardRowPanelDatasourceModel](docs/DashboardRowPanelDatasourceModel.md)
+ - [DashboardRowPanelGridPosModel](docs/DashboardRowPanelGridPosModel.md)
+ - [DashboardRowPanelModel](docs/DashboardRowPanelModel.md)
  - [DashboardSnapshotDTOModel](docs/DashboardSnapshotDTOModel.md)
  - [DashboardSnapshotModel](docs/DashboardSnapshotModel.md)
  - [DashboardTagCloudItemModel](docs/DashboardTagCloudItemModel.md)
+ - [DashboardTargetModel](docs/DashboardTargetModel.md)
+ - [DashboardTemplatingModel](docs/DashboardTemplatingModel.md)
+ - [DashboardThresholdModel](docs/DashboardThresholdModel.md)
+ - [DashboardThresholdsConfigModel](docs/DashboardThresholdsConfigModel.md)
+ - [DashboardThresholdsConfigStepsModel](docs/DashboardThresholdsConfigStepsModel.md)
+ - [DashboardThresholdsModeModel](docs/DashboardThresholdsModeModel.md)
+ - [DashboardTimeModel](docs/DashboardTimeModel.md)
+ - [DashboardTimepickerModel](docs/DashboardTimepickerModel.md)
+ - [DashboardTransformationModel](docs/DashboardTransformationModel.md)
+ - [DashboardVariableModelModel](docs/DashboardVariableModelModel.md)
+ - [DashboardVariableTypeModel](docs/DashboardVariableTypeModel.md)
  - [DashboardVersionDTOModel](docs/DashboardVersionDTOModel.md)
  - [DashboardVersionMetaModel](docs/DashboardVersionMetaModel.md)
- - [DataLinkModel](docs/DataLinkModel.md)
+ - [DataFramesModel](docs/DataFramesModel.md)
+ - [DataQueryResultModel](docs/DataQueryResultModel.md)
  - [DataResponseModel](docs/DataResponseModel.md)
+ - [DataRowValuesModel](docs/DataRowValuesModel.md)
  - [DataSourceListItemDTOModel](docs/DataSourceListItemDTOModel.md)
  - [DataSourceListModel](docs/DataSourceListModel.md)
  - [DataSourceModel](docs/DataSourceModel.md)
+ - [DataTableColumnModel](docs/DataTableColumnModel.md)
+ - [DataTableModel](docs/DataTableModel.md)
+ - [DataTimePointModel](docs/DataTimePointModel.md)
+ - [DataTimeSeriesModel](docs/DataTimeSeriesModel.md)
+ - [DataTimeSeriesPointsModel](docs/DataTimeSeriesPointsModel.md)
+ - [DataTimeSeriesSliceModel](docs/DataTimeSeriesSliceModel.md)
  - [DayOfMonthRangeModel](docs/DayOfMonthRangeModel.md)
  - [DeleteTokenCommandModel](docs/DeleteTokenCommandModel.md)
  - [DiscoveryBaseModel](docs/DiscoveryBaseModel.md)
@@ -471,15 +514,9 @@ Class | Method | HTTP request | Description
  - [ExtendedReceiverModel](docs/ExtendedReceiverModel.md)
  - [FailedUserModel](docs/FailedUserModel.md)
  - [FailureModel](docs/FailureModel.md)
- - [FieldConfigModel](docs/FieldConfigModel.md)
- - [FieldModel](docs/FieldModel.md)
  - [FindTagsResultModel](docs/FindTagsResultModel.md)
  - [FolderModel](docs/FolderModel.md)
  - [FolderSearchHitModel](docs/FolderSearchHitModel.md)
- - [FrameMetaModel](docs/FrameMetaModel.md)
- - [FrameModel](docs/FrameModel.md)
- - [FrameTypeModel](docs/FrameTypeModel.md)
- - [FramesModel](docs/FramesModel.md)
  - [GetAnnotationTagsResponseModel](docs/GetAnnotationTagsResponseModel.md)
  - [GetHomeDashboardResponseModel](docs/GetHomeDashboardResponseModel.md)
  - [GettableAlertModel](docs/GettableAlertModel.md)
@@ -525,7 +562,6 @@ Class | Method | HTTP request | Description
  - [InlineResponse2008Model](docs/InlineResponse2008Model.md)
  - [InlineResponse2009Model](docs/InlineResponse2009Model.md)
  - [InlineResponse200Model](docs/InlineResponse200Model.md)
- - [InspectTypeModel](docs/InspectTypeModel.md)
  - [ItemDTOModel](docs/ItemDTOModel.md)
  - [JsonModel](docs/JsonModel.md)
  - [LabelModel](docs/LabelModel.md)
@@ -563,8 +599,6 @@ Class | Method | HTTP request | Description
  - [NavbarPreferenceModel](docs/NavbarPreferenceModel.md)
  - [NewApiKeyResultModel](docs/NewApiKeyResultModel.md)
  - [NotFoundModel](docs/NotFoundModel.md)
- - [NoticeModel](docs/NoticeModel.md)
- - [NoticeSeverityModel](docs/NoticeSeverityModel.md)
  - [NotificationTestCommandModel](docs/NotificationTestCommandModel.md)
  - [NotifierConfigModel](docs/NotifierConfigModel.md)
  - [OAuth2Model](docs/OAuth2Model.md)
@@ -608,7 +642,6 @@ Class | Method | HTTP request | Description
  - [PushoverConfigModel](docs/PushoverConfigModel.md)
  - [QueryDataResponseModel](docs/QueryDataResponseModel.md)
  - [QueryHistoryPreferenceModel](docs/QueryHistoryPreferenceModel.md)
- - [QueryStatModel](docs/QueryStatModel.md)
  - [ReceiverModel](docs/ReceiverModel.md)
  - [RecordingRuleJSONModel](docs/RecordingRuleJSONModel.md)
  - [RegexpModel](docs/RegexpModel.md)
@@ -665,9 +698,6 @@ Class | Method | HTTP request | Description
  - [TestReceiversResultModel](docs/TestReceiversResultModel.md)
  - [TestRulePayloadModel](docs/TestRulePayloadModel.md)
  - [TestRuleResponseModel](docs/TestRuleResponseModel.md)
- - [ThresholdModel](docs/ThresholdModel.md)
- - [ThresholdsConfigModel](docs/ThresholdsConfigModel.md)
- - [ThresholdsModeModel](docs/ThresholdsModeModel.md)
  - [TimeIntervalModel](docs/TimeIntervalModel.md)
  - [TimeRangeDTOModel](docs/TimeRangeDTOModel.md)
  - [TimeRangeModel](docs/TimeRangeModel.md)
@@ -675,7 +705,6 @@ Class | Method | HTTP request | Description
  - [TokenStatusModel](docs/TokenStatusModel.md)
  - [TrimDashboardCommandModel](docs/TrimDashboardCommandModel.md)
  - [TrimDashboardFullWithMetaModel](docs/TrimDashboardFullWithMetaModel.md)
- - [TypeModel](docs/TypeModel.md)
  - [URLModel](docs/URLModel.md)
  - [UpdateAlertNotificationCommandModel](docs/UpdateAlertNotificationCommandModel.md)
  - [UpdateAlertNotificationWithUidCommandModel](docs/UpdateAlertNotificationWithUidCommandModel.md)
@@ -702,12 +731,9 @@ Class | Method | HTTP request | Description
  - [UserTokenModel](docs/UserTokenModel.md)
  - [UserinfoModel](docs/UserinfoModel.md)
  - [ValidationErrorModel](docs/ValidationErrorModel.md)
- - [ValueMappingModel](docs/ValueMappingModel.md)
- - [ValueMappingsModel](docs/ValueMappingsModel.md)
  - [VectorModel](docs/VectorModel.md)
  - [VersionInfoModel](docs/VersionInfoModel.md)
  - [VictorOpsConfigModel](docs/VictorOpsConfigModel.md)
- - [VisTypeModel](docs/VisTypeModel.md)
  - [WebhookConfigModel](docs/WebhookConfigModel.md)
  - [WechatConfigModel](docs/WechatConfigModel.md)
  - [WeekdayRangeModel](docs/WeekdayRangeModel.md)

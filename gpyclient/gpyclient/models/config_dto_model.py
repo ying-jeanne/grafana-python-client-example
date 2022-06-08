@@ -40,7 +40,6 @@ class ConfigDTOModel(object):
         'dashboards': 'list[DashboardDTOModel]',
         'enable_csv': 'bool',
         'enable_dashboard_url': 'bool',
-        'formats': 'list[TypeModel]',
         'id': 'int',
         'message': 'str',
         'name': 'str',
@@ -63,7 +62,6 @@ class ConfigDTOModel(object):
         'dashboards': 'dashboards',
         'enable_csv': 'enableCsv',
         'enable_dashboard_url': 'enableDashboardUrl',
-        'formats': 'formats',
         'id': 'id',
         'message': 'message',
         'name': 'name',
@@ -78,7 +76,7 @@ class ConfigDTOModel(object):
         'user_id': 'userId'
     }
 
-    def __init__(self, created=None, dashboard_id=None, dashboard_name=None, dashboard_uid=None, dashboards=None, enable_csv=None, enable_dashboard_url=None, formats=None, id=None, message=None, name=None, options=None, org_id=None, recipients=None, reply_to=None, schedule=None, state=None, template_vars=None, updated=None, user_id=None, _configuration=None):  # noqa: E501
+    def __init__(self, created=None, dashboard_id=None, dashboard_name=None, dashboard_uid=None, dashboards=None, enable_csv=None, enable_dashboard_url=None, id=None, message=None, name=None, options=None, org_id=None, recipients=None, reply_to=None, schedule=None, state=None, template_vars=None, updated=None, user_id=None, _configuration=None):  # noqa: E501
         """ConfigDTOModel - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -91,7 +89,6 @@ class ConfigDTOModel(object):
         self._dashboards = None
         self._enable_csv = None
         self._enable_dashboard_url = None
-        self._formats = None
         self._id = None
         self._message = None
         self._name = None
@@ -120,8 +117,6 @@ class ConfigDTOModel(object):
             self.enable_csv = enable_csv
         if enable_dashboard_url is not None:
             self.enable_dashboard_url = enable_dashboard_url
-        if formats is not None:
-            self.formats = formats
         if id is not None:
             self.id = id
         if message is not None:
@@ -293,27 +288,6 @@ class ConfigDTOModel(object):
         """
 
         self._enable_dashboard_url = enable_dashboard_url
-
-    @property
-    def formats(self):
-        """Gets the formats of this ConfigDTOModel.  # noqa: E501
-
-
-        :return: The formats of this ConfigDTOModel.  # noqa: E501
-        :rtype: list[TypeModel]
-        """
-        return self._formats
-
-    @formats.setter
-    def formats(self, formats):
-        """Sets the formats of this ConfigDTOModel.
-
-
-        :param formats: The formats of this ConfigDTOModel.  # noqa: E501
-        :type: list[TypeModel]
-        """
-
-        self._formats = formats
 
     @property
     def id(self):

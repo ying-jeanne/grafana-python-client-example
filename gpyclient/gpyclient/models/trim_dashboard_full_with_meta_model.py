@@ -33,8 +33,8 @@ class TrimDashboardFullWithMetaModel(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'dashboard': 'JsonModel',
-        'meta': 'JsonModel'
+        'dashboard': 'DashboardModel',
+        'meta': 'DashboardModel'
     }
 
     attribute_map = {
@@ -63,7 +63,7 @@ class TrimDashboardFullWithMetaModel(object):
 
 
         :return: The dashboard of this TrimDashboardFullWithMetaModel.  # noqa: E501
-        :rtype: JsonModel
+        :rtype: DashboardModel
         """
         return self._dashboard
 
@@ -73,7 +73,7 @@ class TrimDashboardFullWithMetaModel(object):
 
 
         :param dashboard: The dashboard of this TrimDashboardFullWithMetaModel.  # noqa: E501
-        :type: JsonModel
+        :type: DashboardModel
         """
 
         self._dashboard = dashboard
@@ -84,7 +84,7 @@ class TrimDashboardFullWithMetaModel(object):
 
 
         :return: The meta of this TrimDashboardFullWithMetaModel.  # noqa: E501
-        :rtype: JsonModel
+        :rtype: DashboardModel
         """
         return self._meta
 
@@ -94,7 +94,7 @@ class TrimDashboardFullWithMetaModel(object):
 
 
         :param meta: The meta of this TrimDashboardFullWithMetaModel.  # noqa: E501
-        :type: JsonModel
+        :type: DashboardModel
         """
 
         self._meta = meta

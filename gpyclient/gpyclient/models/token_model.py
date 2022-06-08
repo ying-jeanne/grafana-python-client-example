@@ -38,7 +38,9 @@ class TokenModel(object):
         'details_url': 'str',
         'exp': 'int',
         'iat': 'int',
+        'included_admins': 'int',
         'included_users': 'int',
+        'included_viewers': 'int',
         'iss': 'str',
         'jti': 'str',
         'lexp': 'int',
@@ -64,7 +66,9 @@ class TokenModel(object):
         'details_url': 'details_url',
         'exp': 'exp',
         'iat': 'iat',
+        'included_admins': 'included_admins',
         'included_users': 'included_users',
+        'included_viewers': 'included_viewers',
         'iss': 'iss',
         'jti': 'jti',
         'lexp': 'lexp',
@@ -84,7 +88,7 @@ class TokenModel(object):
         'usage_billing': 'usage_billing'
     }
 
-    def __init__(self, account=None, company=None, details_url=None, exp=None, iat=None, included_users=None, iss=None, jti=None, lexp=None, lic_exp_warn_days=None, lid=None, limit_by=None, max_concurrent_user_sessions=None, nbf=None, prod=None, slug=None, status=None, sub=None, tok_exp_warn_days=None, trial=None, trial_exp=None, update_days=None, usage_billing=None, _configuration=None):  # noqa: E501
+    def __init__(self, account=None, company=None, details_url=None, exp=None, iat=None, included_admins=None, included_users=None, included_viewers=None, iss=None, jti=None, lexp=None, lic_exp_warn_days=None, lid=None, limit_by=None, max_concurrent_user_sessions=None, nbf=None, prod=None, slug=None, status=None, sub=None, tok_exp_warn_days=None, trial=None, trial_exp=None, update_days=None, usage_billing=None, _configuration=None):  # noqa: E501
         """TokenModel - a model defined in Swagger"""  # noqa: E501
         if _configuration is None:
             _configuration = Configuration()
@@ -95,7 +99,9 @@ class TokenModel(object):
         self._details_url = None
         self._exp = None
         self._iat = None
+        self._included_admins = None
         self._included_users = None
+        self._included_viewers = None
         self._iss = None
         self._jti = None
         self._lexp = None
@@ -125,8 +131,12 @@ class TokenModel(object):
             self.exp = exp
         if iat is not None:
             self.iat = iat
+        if included_admins is not None:
+            self.included_admins = included_admins
         if included_users is not None:
             self.included_users = included_users
+        if included_viewers is not None:
+            self.included_viewers = included_viewers
         if iss is not None:
             self.iss = iss
         if jti is not None:
@@ -268,6 +278,27 @@ class TokenModel(object):
         self._iat = iat
 
     @property
+    def included_admins(self):
+        """Gets the included_admins of this TokenModel.  # noqa: E501
+
+
+        :return: The included_admins of this TokenModel.  # noqa: E501
+        :rtype: int
+        """
+        return self._included_admins
+
+    @included_admins.setter
+    def included_admins(self, included_admins):
+        """Sets the included_admins of this TokenModel.
+
+
+        :param included_admins: The included_admins of this TokenModel.  # noqa: E501
+        :type: int
+        """
+
+        self._included_admins = included_admins
+
+    @property
     def included_users(self):
         """Gets the included_users of this TokenModel.  # noqa: E501
 
@@ -287,6 +318,27 @@ class TokenModel(object):
         """
 
         self._included_users = included_users
+
+    @property
+    def included_viewers(self):
+        """Gets the included_viewers of this TokenModel.  # noqa: E501
+
+
+        :return: The included_viewers of this TokenModel.  # noqa: E501
+        :rtype: int
+        """
+        return self._included_viewers
+
+    @included_viewers.setter
+    def included_viewers(self, included_viewers):
+        """Sets the included_viewers of this TokenModel.
+
+
+        :param included_viewers: The included_viewers of this TokenModel.  # noqa: E501
+        :type: int
+        """
+
+        self._included_viewers = included_viewers
 
     @property
     def iss(self):
