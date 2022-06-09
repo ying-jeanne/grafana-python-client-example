@@ -3,6 +3,7 @@ import time
 import gpyclient
 from gpyclient.rest import ApiException
 from pprint import pprint
+from datetime import datetime
 
 # Configure API key authorization: api_key
 configuration = gpyclient.Configuration()
@@ -16,7 +17,16 @@ configuration.password = 'password'
 
 # create an instance of the API class
 api_instance = gpyclient.DashboardsApi(gpyclient.ApiClient(configuration))
-body = gpyclient.SaveDashboardCommandModel() # SaveDashboardCommandModel | 
+db = gpyclient.DashboardModel(
+    annotations=None, 
+    description="this is the description of a dashboard", 
+    fiscal_year_start_month = 10, 
+    graph_tooltip = 1, 
+    title = 'dashisgood', 
+    uid = 'aaaabbbb', 
+    schema_version = 26,
+    version = 3)
+body = gpyclient.SaveDashboardCommandModel(dashboard = db, folder_id = 0) # SaveDashboardCommandModel | 
 
 try:
     # Create / Update dashboard
